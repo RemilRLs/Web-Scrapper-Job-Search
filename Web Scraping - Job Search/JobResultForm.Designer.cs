@@ -31,13 +31,19 @@
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ButtonNextJob = new System.Windows.Forms.Button();
-            this.SeeHistoryButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.recentSearch = new System.Windows.Forms.Button();
+            this.resultSearch = new System.Windows.Forms.Button();
             this.findJobsButton = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList3 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList4 = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -48,64 +54,56 @@
             // 
             // ButtonNextJob
             // 
-            this.ButtonNextJob.Location = new System.Drawing.Point(325, 105);
+            this.ButtonNextJob.Location = new System.Drawing.Point(389, 106);
             this.ButtonNextJob.Name = "ButtonNextJob";
-            this.ButtonNextJob.Size = new System.Drawing.Size(94, 29);
+            this.ButtonNextJob.Size = new System.Drawing.Size(94, 28);
             this.ButtonNextJob.TabIndex = 1;
             this.ButtonNextJob.Text = "Next";
             this.ButtonNextJob.UseVisualStyleBackColor = true;
             this.ButtonNextJob.Click += new System.EventHandler(this.ButtonNextJob_Click_1);
             // 
-            // SeeHistoryButton
-            // 
-            this.SeeHistoryButton.Location = new System.Drawing.Point(472, 105);
-            this.SeeHistoryButton.Name = "SeeHistoryButton";
-            this.SeeHistoryButton.Size = new System.Drawing.Size(94, 29);
-            this.SeeHistoryButton.TabIndex = 2;
-            this.SeeHistoryButton.Text = "See history";
-            this.SeeHistoryButton.UseVisualStyleBackColor = true;
-            this.SeeHistoryButton.Click += new System.EventHandler(this.SeeHistoryButton_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.recentSearch);
+            this.panel1.Controls.Add(this.resultSearch);
             this.panel1.Controls.Add(this.findJobsButton);
             this.panel1.Controls.Add(this.panelLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1317, 70);
+            this.panel1.Size = new System.Drawing.Size(1047, 70);
             this.panel1.TabIndex = 3;
             // 
-            // button2
+            // recentSearch
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(666, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(208, 70);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Recent searches";
-            this.button2.UseVisualStyleBackColor = true;
+            this.recentSearch.Dock = System.Windows.Forms.DockStyle.Left;
+            this.recentSearch.FlatAppearance.BorderSize = 0;
+            this.recentSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.recentSearch.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.recentSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.recentSearch.Location = new System.Drawing.Point(773, 0);
+            this.recentSearch.Name = "recentSearch";
+            this.recentSearch.Size = new System.Drawing.Size(264, 70);
+            this.recentSearch.TabIndex = 3;
+            this.recentSearch.Text = "Recent searches";
+            this.recentSearch.UseVisualStyleBackColor = true;
+            this.recentSearch.Click += new System.EventHandler(this.recentSearch_Click);
             // 
-            // button1
+            // resultSearch
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(458, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 70);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Result of the search";
-            this.button1.UseVisualStyleBackColor = true;
+            this.resultSearch.Dock = System.Windows.Forms.DockStyle.Left;
+            this.resultSearch.FlatAppearance.BorderSize = 0;
+            this.resultSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resultSearch.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.resultSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.resultSearch.Location = new System.Drawing.Point(502, 0);
+            this.resultSearch.Name = "resultSearch";
+            this.resultSearch.Size = new System.Drawing.Size(271, 70);
+            this.resultSearch.TabIndex = 2;
+            this.resultSearch.Text = "Result of the search";
+            this.resultSearch.UseVisualStyleBackColor = true;
+            this.resultSearch.Click += new System.EventHandler(this.resultSearch_Click);
             // 
             // findJobsButton
             // 
@@ -116,32 +114,68 @@
             this.findJobsButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.findJobsButton.Location = new System.Drawing.Point(250, 0);
             this.findJobsButton.Name = "findJobsButton";
-            this.findJobsButton.Size = new System.Drawing.Size(208, 70);
+            this.findJobsButton.Size = new System.Drawing.Size(252, 70);
             this.findJobsButton.TabIndex = 1;
             this.findJobsButton.Text = "Find jobs";
             this.findJobsButton.UseVisualStyleBackColor = true;
+            this.findJobsButton.Click += new System.EventHandler(this.findJobsButton_Click);
             // 
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panelLogo.Controls.Add(this.pictureBoxLogo);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(250, 70);
             this.panelLogo.TabIndex = 0;
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Location = new System.Drawing.Point(50, 0);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(141, 70);
+            this.pictureBoxLogo.TabIndex = 4;
+            this.pictureBoxLogo.TabStop = false;
+            this.pictureBoxLogo.Click += new System.EventHandler(this.pictureBoxLogo_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // imageList2
+            // 
+            this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // imageList3
+            // 
+            this.imageList3.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList3.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList3.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // imageList4
+            // 
+            this.imageList4.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList4.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList4.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // JobResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1317, 524);
+            this.ClientSize = new System.Drawing.Size(1047, 564);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.SeeHistoryButton);
             this.Controls.Add(this.ButtonNextJob);
             this.Name = "JobResultForm";
-            this.Text = "JobResultForm";
+            this.Text = "Job Result";
             this.Load += new System.EventHandler(this.JobResultForm_Load);
             this.panel1.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -150,11 +184,15 @@
 
         private ContextMenuStrip contextMenuStrip1;
         private Button ButtonNextJob;
-        private Button SeeHistoryButton;
         private Panel panel1;
-        private Button button2;
-        private Button button1;
+        private Button recentSearch;
+        private Button resultSearch;
         private Button findJobsButton;
         private Panel panelLogo;
+        private ImageList imageList1;
+        private ImageList imageList2;
+        private ImageList imageList3;
+        private ImageList imageList4;
+        private PictureBox pictureBoxLogo;
     }
 }

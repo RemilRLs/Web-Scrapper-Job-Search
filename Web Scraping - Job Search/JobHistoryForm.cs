@@ -25,12 +25,20 @@ namespace Web_Scraping___Job_Search
             foreach (Button button in this.Controls.OfType<Button>()){
 
                 button.Click += new EventHandler(Button_Click);
-                Debug.WriteLine("RJEIORJEZIOJREIOZ : " + button.Text);
             }
         }
 
         private void JobHistoryForm_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+
+            string iconFile = "ressources..\\..\\..\\..\\..\\ressources\\icons\\fingerprint.circ";
+            this.Icon = new Icon(iconFile);
+
+            pictureBoxLogo.Image = Image.FromFile("ressources..\\..\\..\\..\\..\\ressources\\logo\\find_job_logo.jpg");
+            pictureBoxLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+
             JobHistory jobHistory = new JobHistory();
             this.AutoScroll = true;
 
@@ -111,6 +119,30 @@ namespace Web_Scraping___Job_Search
 
             JobResultFormJob.Show();
             this.Hide();
+        }
+
+        private void resultSearch_Click(object sender, EventArgs e)
+        {
+            JobResultForm jobResult = new JobResultForm();
+            
+            jobResult.Show();
+            this.Hide();
+        }
+
+        private void findJobsButton_Click(object sender, EventArgs e)
+        {
+            Form1 jobSearch = new Form1();
+
+            this.Hide();
+            jobSearch.Show();
+        }
+
+        private void pictureBoxLogo_Click(object sender, EventArgs e)
+        {
+            Form1 jobSearch = new Form1();
+
+            this.Hide();
+            jobSearch.Show();
         }
     }
 }

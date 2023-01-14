@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using JobSearchTool;
 using ShowInformation;
 using JobHistoryCheck;
+using static System.Windows.Forms.DataFormats;
 
 namespace Web_Scraping___Job_Search
 {
@@ -33,6 +34,14 @@ namespace Web_Scraping___Job_Search
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+
+            string iconFile = "ressources..\\..\\..\\..\\..\\ressources\\icons\\fingerprint.circ";
+            this.Icon = new Icon(iconFile);
+
+            pictureBoxLogo.Image = Image.FromFile("ressources..\\..\\..\\..\\..\\ressources\\logo\\find_job_logo.jpg");
+            pictureBoxLogo.SizeMode = PictureBoxSizeMode.StretchImage;
 
 
             WhatJobTextBox.Text = "What ? Job Title or Keywords";
@@ -109,15 +118,15 @@ namespace Web_Scraping___Job_Search
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //System.Diagnostics.Process.Start("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", "http://www.facebook.com");
-        }
-
         private void RecentSearchButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             jobHistoryForm.Show();
+        }
+
+        private void pictureBoxLogo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

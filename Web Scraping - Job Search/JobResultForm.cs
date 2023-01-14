@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ShowInformation;
+using static System.Windows.Forms.DataFormats;
 
 namespace Web_Scraping___Job_Search
 {
@@ -27,6 +28,16 @@ namespace Web_Scraping___Job_Search
 
         private void JobResultForm_Load(object sender, EventArgs e)
         {
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+
+            string iconFile = "ressources..\\..\\..\\..\\..\\ressources\\icons\\fingerprint.circ";
+            this.Icon = new Icon(iconFile);
+
+            pictureBoxLogo.Image = Image.FromFile("ressources..\\..\\..\\..\\..\\ressources\\logo\\find_job_logo.jpg");
+            pictureBoxLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+
             this.AutoScroll = true;
 
             foreach (Control control in this.Controls)
@@ -104,11 +115,7 @@ namespace Web_Scraping___Job_Search
             }
         }
 
-        private void SeeHistoryButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            jobHistory.Show();
-        }
+
 
         private void TitleJobButton_Click(object sender, EventArgs e)
         {
@@ -128,6 +135,33 @@ namespace Web_Scraping___Job_Search
 
 
             labelListInformationJob = showJobInfo.ShowMoreInformationJob(this, lastChar);
+        }
+
+        private void recentSearch_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            jobHistory.Show();
+        }
+
+        private void findJobsButton_Click(object sender, EventArgs e)
+        {
+            Form1 jobSearch = new Form1();
+
+            this.Hide();
+            jobSearch.Show();
+        }
+
+        private void resultSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxLogo_Click(object sender, EventArgs e)
+        {
+            Form1 jobSearch = new Form1();
+
+            this.Hide();
+            jobSearch.Show();
         }
     }
 }
