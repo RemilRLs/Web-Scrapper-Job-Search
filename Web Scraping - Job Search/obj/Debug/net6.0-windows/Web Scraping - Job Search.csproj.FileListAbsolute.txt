@@ -1,0 +1,25 @@
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\bin\Debug\net6.0-windows\Web Scraping - Job Search.exe
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\bin\Debug\net6.0-windows\Web Scraping - Job Search.deps.json
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\bin\Debug\net6.0-windows\Web Scraping - Job Search.runtimeconfig.json
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\bin\Debug\net6.0-windows\Web Scraping - Job Search.dll
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\bin\Debug\net6.0-windows\Web Scraping - Job Search.pdb
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web Scraping - Job Search.csproj.AssemblyReference.cache
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web_Scraping___Job_Search.Form1.resources
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web Scraping - Job Search.csproj.GenerateResource.cache
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web Scraping - Job Search.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web Scraping - Job Search.AssemblyInfoInputs.cache
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web Scraping - Job Search.AssemblyInfo.cs
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web Scraping - Job Search.csproj.CoreCompileInputs.cache
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web Scraping - Job Search.dll
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\refint\Web Scraping - Job Search.dll
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web Scraping - Job Search.pdb
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web Scraping - Job Search.genruntimeconfig.cache
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\ref\Web Scraping - Job Search.dll
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web Scraping - Job Search.csproj.CopyComplete
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\bin\Debug\net6.0-windows\DiscordRPC.dll
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\bin\Debug\net6.0-windows\HtmlAgilityPack.dll
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\bin\Debug\net6.0-windows\MySqlConnector.dll
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web_Scraping___Job_Search.Properties.Resources.resources
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web_Scraping___Job_Search.JobResultForm.resources
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web_Scraping___Job_Search.JobHistoryForm.resources

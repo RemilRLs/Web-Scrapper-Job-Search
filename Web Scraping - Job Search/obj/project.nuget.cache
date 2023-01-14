@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "sm02Jlqm6aB+KgB/4EDnbzPFQyEHI3A9+7N3c2hyj+pWZbGNvB3AgheUzOK/gye30mPuMCE/tnDRMjgXolb0kg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\remil\\Desktop\\Glyndwr University\\Applied Programming\\Web Scraping\\Web Scraping - Job Search\\Web Scraping - Job Search\\Web Scraping - Job Search.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\remil\\.nuget\\packages\\discordrichpresence\\1.1.1.14\\discordrichpresence.1.1.1.14.nupkg.sha512",
+    "C:\\Users\\remil\\.nuget\\packages\\htmlagilitypack\\1.11.46\\htmlagilitypack.1.11.46.nupkg.sha512",
+    "C:\\Users\\remil\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\remil\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "C:\\Users\\remil\\.nuget\\packages\\mysqlconnector\\2.2.2\\mysqlconnector.2.2.2.nupkg.sha512",
+    "C:\\Users\\remil\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\remil\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",
+    "C:\\Users\\remil\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
