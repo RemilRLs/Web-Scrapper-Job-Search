@@ -71,7 +71,7 @@ namespace JobSearchTool
                     if (nodeInformation.SelectSingleNode(".//div/h2/a") != null)
                     {
                         string jobTitle = nodeInformation.SelectSingleNode(".//div/h2/a").InnerText;
-                        Debug.WriteLine(jobTitle);
+                        //Debug.WriteLine(jobTitle);
                         jobOffer.title = jobTitle;
                         
                     }
@@ -85,7 +85,7 @@ namespace JobSearchTool
                     if (nodeInformation.SelectSingleNode(".//p") != null)
                     {
                         string jobDescription = nodeInformation.SelectSingleNode(".//p").InnerText;
-                        Debug.WriteLine(jobDescription);
+                        //Debug.WriteLine(jobDescription);
                         jobOffer.description = jobDescription;
 
                     }
@@ -97,7 +97,7 @@ namespace JobSearchTool
 
                         salary = salary.Replace("&#163;", "£");
 
-                        Debug.WriteLine(salary);
+                        //Debug.WriteLine(salary);
                         jobOffer.salary = salary;
                     }
 
@@ -107,7 +107,7 @@ namespace JobSearchTool
                     {
                         string location = nodeInformation.SelectSingleNode(".//div/dl/dd[@class='location']").InnerText;
 
-                        Debug.WriteLine(location);
+                        ///Debug.WriteLine(location);
                         jobOffer.location = location;
                     }
 
@@ -118,7 +118,7 @@ namespace JobSearchTool
                         
 
                         string jobImageLink = nodeInformation.SelectSingleNode(".//div/div/a/img").Attributes["src"].Value;
-                        Debug.WriteLine("Image src : " + jobImageLink);
+                        //Debug.WriteLine("Image src : " + jobImageLink);
                         jobOffer.jobImageLink = jobImageLink;
                     }
 
