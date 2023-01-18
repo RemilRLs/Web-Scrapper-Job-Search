@@ -23,3 +23,4 @@ C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web S
 C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web_Scraping___Job_Search.Properties.Resources.resources
 C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web_Scraping___Job_Search.JobResultForm.resources
 C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web_Scraping___Job_Search.JobHistoryForm.resources
+C:\Users\remil\Desktop\Glyndwr University\Applied Programming\Web Scraping\Web Scraping - Job Search\Web Scraping - Job Search\obj\Debug\net6.0-windows\Web_Scraping___Job_Search.WishListForm.resources

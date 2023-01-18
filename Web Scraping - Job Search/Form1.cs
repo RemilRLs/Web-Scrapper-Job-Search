@@ -10,6 +10,7 @@ using ShowInformation;
 using JobHistoryCheck;
 using static System.Windows.Forms.DataFormats;
 using System.Diagnostics;
+using WishList;
 
 namespace Web_Scraping___Job_Search
 {
@@ -22,8 +23,9 @@ namespace Web_Scraping___Job_Search
         JobResultForm JobResultFormJob = new JobResultForm();
         JobHistoryForm jobHistoryForm = new JobHistoryForm();
         ShowJobInformation showJobInfo = new ShowJobInformation();
+        WishListForm wishListForm = new WishListForm();
 
-       
+
         public Form1()
         {
 
@@ -43,6 +45,13 @@ namespace Web_Scraping___Job_Search
 
             pictureBoxLogo.Image = Image.FromFile("ressources..\\..\\..\\..\\..\\ressources\\logo\\find_job_logo.jpg");
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            pictureBoxSearch.Image = Image.FromFile("ressources..\\..\\..\\..\\..\\ressources\\icons\\search-interface-symbol.png");
+            pictureBoxSearch.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            pictureBoxLoc.Image = Image.FromFile("ressources..\\..\\..\\..\\..\\ressources\\icons\\location.png");
+            pictureBoxLoc.SizeMode = PictureBoxSizeMode.StretchImage;
+
 
 
             WhatJobTextBox.Text = "What ? Job Title or Keywords";
@@ -131,7 +140,7 @@ namespace Web_Scraping___Job_Search
             newURLDataFinder.SearchInformationJob();
 
             showJobInfo.ShowJobInformationData(JobResultFormJob);
-            showJobInfo.offset += 3;
+            showJobInfo.offset = 0;
 
         }
 
@@ -204,7 +213,7 @@ namespace Web_Scraping___Job_Search
 
                 if (int.TryParse((From), out int resultFrom)){
 
-                    advancedLink.Append("sa-15000~0~5/");
+                    advancedLink.Append("sa-" + resultFrom + "~0~5/");
                     return advancedLink;
                 }
                 else
@@ -310,6 +319,12 @@ namespace Web_Scraping___Job_Search
 
 
             return advancedLink;
+        }
+
+        private void wishListButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            wishListForm.Show();
         }
     }
 }

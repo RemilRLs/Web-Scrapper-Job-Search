@@ -35,6 +35,7 @@
             this.findJobsButton = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.wishListButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -53,6 +54,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel1.Controls.Add(this.wishListButton);
             this.panel1.Controls.Add(this.recentSearch);
             this.panel1.Controls.Add(this.resultSearch);
             this.panel1.Controls.Add(this.findJobsButton);
@@ -70,9 +72,9 @@
             this.recentSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.recentSearch.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.recentSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.recentSearch.Location = new System.Drawing.Point(666, 0);
+            this.recentSearch.Location = new System.Drawing.Point(595, 0);
             this.recentSearch.Name = "recentSearch";
-            this.recentSearch.Size = new System.Drawing.Size(208, 70);
+            this.recentSearch.Size = new System.Drawing.Size(175, 70);
             this.recentSearch.TabIndex = 3;
             this.recentSearch.Text = "Recent searches";
             this.recentSearch.UseVisualStyleBackColor = true;
@@ -84,9 +86,9 @@
             this.resultSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.resultSearch.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.resultSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.resultSearch.Location = new System.Drawing.Point(458, 0);
+            this.resultSearch.Location = new System.Drawing.Point(432, 0);
             this.resultSearch.Name = "resultSearch";
-            this.resultSearch.Size = new System.Drawing.Size(208, 70);
+            this.resultSearch.Size = new System.Drawing.Size(163, 70);
             this.resultSearch.TabIndex = 2;
             this.resultSearch.Text = "Result of the search";
             this.resultSearch.UseVisualStyleBackColor = true;
@@ -101,7 +103,7 @@
             this.findJobsButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.findJobsButton.Location = new System.Drawing.Point(250, 0);
             this.findJobsButton.Name = "findJobsButton";
-            this.findJobsButton.Size = new System.Drawing.Size(208, 70);
+            this.findJobsButton.Size = new System.Drawing.Size(182, 70);
             this.findJobsButton.TabIndex = 1;
             this.findJobsButton.Text = "Find jobs";
             this.findJobsButton.UseVisualStyleBackColor = true;
@@ -125,6 +127,21 @@
             this.pictureBoxLogo.TabIndex = 5;
             this.pictureBoxLogo.TabStop = false;
             this.pictureBoxLogo.Click += new System.EventHandler(this.pictureBoxLogo_Click);
+            // 
+            // wishListButton
+            // 
+            this.wishListButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.wishListButton.FlatAppearance.BorderSize = 0;
+            this.wishListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wishListButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.wishListButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.wishListButton.Location = new System.Drawing.Point(770, 0);
+            this.wishListButton.Name = "wishListButton";
+            this.wishListButton.Size = new System.Drawing.Size(118, 70);
+            this.wishListButton.TabIndex = 5;
+            this.wishListButton.Text = "Wishlist";
+            this.wishListButton.UseVisualStyleBackColor = true;
+            this.wishListButton.Click += new System.EventHandler(this.wishListButton_Click);
             // 
             // JobHistoryForm
             // 
@@ -152,5 +169,6 @@
         private Button findJobsButton;
         private Panel panelLogo;
         private PictureBox pictureBoxLogo;
+        private Button wishListButton;
     }
 }

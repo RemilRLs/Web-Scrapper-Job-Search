@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.wishListButton = new System.Windows.Forms.Button();
             this.RecentSearchButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.findJobsButton = new System.Windows.Forms.Button();
@@ -50,17 +51,22 @@
             this.checkBoxTemporaryJob = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.labelAdJob = new System.Windows.Forms.Label();
+            this.pictureBoxSearch = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLoc = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panelAdJob2.SuspendLayout();
             this.panelAdJob.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoc)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel1.Controls.Add(this.wishListButton);
             this.panel1.Controls.Add(this.RecentSearchButton);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.findJobsButton);
@@ -71,6 +77,21 @@
             this.panel1.Size = new System.Drawing.Size(1238, 70);
             this.panel1.TabIndex = 0;
             // 
+            // wishListButton
+            // 
+            this.wishListButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.wishListButton.FlatAppearance.BorderSize = 0;
+            this.wishListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wishListButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.wishListButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.wishListButton.Location = new System.Drawing.Point(962, 0);
+            this.wishListButton.Name = "wishListButton";
+            this.wishListButton.Size = new System.Drawing.Size(244, 70);
+            this.wishListButton.TabIndex = 4;
+            this.wishListButton.Text = "Wishlist";
+            this.wishListButton.UseVisualStyleBackColor = true;
+            this.wishListButton.Click += new System.EventHandler(this.wishListButton_Click);
+            // 
             // RecentSearchButton
             // 
             this.RecentSearchButton.Dock = System.Windows.Forms.DockStyle.Left;
@@ -78,9 +99,9 @@
             this.RecentSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RecentSearchButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.RecentSearchButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.RecentSearchButton.Location = new System.Drawing.Point(844, 0);
+            this.RecentSearchButton.Location = new System.Drawing.Point(718, 0);
             this.RecentSearchButton.Name = "RecentSearchButton";
-            this.RecentSearchButton.Size = new System.Drawing.Size(370, 70);
+            this.RecentSearchButton.Size = new System.Drawing.Size(244, 70);
             this.RecentSearchButton.TabIndex = 3;
             this.RecentSearchButton.Text = "Recent searches";
             this.RecentSearchButton.UseVisualStyleBackColor = true;
@@ -93,9 +114,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(547, 0);
+            this.button1.Location = new System.Drawing.Point(485, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(297, 70);
+            this.button1.Size = new System.Drawing.Size(233, 70);
             this.button1.TabIndex = 2;
             this.button1.Text = "Result of the search";
             this.button1.UseVisualStyleBackColor = true;
@@ -109,7 +130,7 @@
             this.findJobsButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.findJobsButton.Location = new System.Drawing.Point(250, 0);
             this.findJobsButton.Name = "findJobsButton";
-            this.findJobsButton.Size = new System.Drawing.Size(297, 70);
+            this.findJobsButton.Size = new System.Drawing.Size(235, 70);
             this.findJobsButton.TabIndex = 1;
             this.findJobsButton.Text = "Find jobs";
             this.findJobsButton.UseVisualStyleBackColor = true;
@@ -141,7 +162,7 @@
             "cybersecurity"});
             this.WhatJobTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.WhatJobTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.WhatJobTextBox.Location = new System.Drawing.Point(401, 219);
+            this.WhatJobTextBox.Location = new System.Drawing.Point(349, 216);
             this.WhatJobTextBox.Name = "WhatJobTextBox";
             this.WhatJobTextBox.Size = new System.Drawing.Size(244, 27);
             this.WhatJobTextBox.TabIndex = 6;
@@ -155,7 +176,7 @@
             "cybersecurity"});
             this.WhatLocationTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.WhatLocationTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.WhatLocationTextBox.Location = new System.Drawing.Point(807, 219);
+            this.WhatLocationTextBox.Location = new System.Drawing.Point(844, 216);
             this.WhatLocationTextBox.Name = "WhatLocationTextBox";
             this.WhatLocationTextBox.Size = new System.Drawing.Size(244, 27);
             this.WhatLocationTextBox.TabIndex = 7;
@@ -167,7 +188,7 @@
             this.ButtonFindJobs.BackColor = System.Drawing.SystemColors.Highlight;
             this.ButtonFindJobs.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ButtonFindJobs.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ButtonFindJobs.Location = new System.Drawing.Point(472, 292);
+            this.ButtonFindJobs.Location = new System.Drawing.Point(485, 291);
             this.ButtonFindJobs.Name = "ButtonFindJobs";
             this.ButtonFindJobs.Size = new System.Drawing.Size(458, 53);
             this.ButtonFindJobs.TabIndex = 8;
@@ -321,12 +342,30 @@
             this.labelAdJob.TabIndex = 0;
             this.labelAdJob.Text = "Advanced Job Search";
             // 
+            // pictureBoxSearch
+            // 
+            this.pictureBoxSearch.Location = new System.Drawing.Point(599, 216);
+            this.pictureBoxSearch.Name = "pictureBoxSearch";
+            this.pictureBoxSearch.Size = new System.Drawing.Size(27, 27);
+            this.pictureBoxSearch.TabIndex = 11;
+            this.pictureBoxSearch.TabStop = false;
+            // 
+            // pictureBoxLoc
+            // 
+            this.pictureBoxLoc.Location = new System.Drawing.Point(1094, 216);
+            this.pictureBoxLoc.Name = "pictureBoxLoc";
+            this.pictureBoxLoc.Size = new System.Drawing.Size(27, 27);
+            this.pictureBoxLoc.TabIndex = 12;
+            this.pictureBoxLoc.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1238, 523);
+            this.Controls.Add(this.pictureBoxLoc);
+            this.Controls.Add(this.pictureBoxSearch);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ButtonFindJobs);
             this.Controls.Add(this.WhatLocationTextBox);
@@ -345,6 +384,8 @@
             this.panelAdJob2.PerformLayout();
             this.panelAdJob.ResumeLayout(false);
             this.panelAdJob.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,5 +415,8 @@
         private Label label2;
         private TextBox textBoxFromSalary;
         private Label label3;
+        private PictureBox pictureBoxSearch;
+        private PictureBox pictureBoxLoc;
+        private Button wishListButton;
     }
 }

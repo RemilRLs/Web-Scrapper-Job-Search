@@ -144,5 +144,13 @@ namespace Web_Scraping___Job_Search
             this.Hide();
             jobSearch.Show();
         }
+
+        private void wishListButton_Click(object sender, EventArgs e)
+        {
+            WishListForm wishList = new WishListForm();
+
+            this.Hide();
+            wishList.Show();
+        }
     }
 }

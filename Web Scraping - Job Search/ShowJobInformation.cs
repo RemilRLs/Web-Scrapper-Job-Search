@@ -7,6 +7,7 @@ using MySqlConnector;
 using DatabaseMySQL;
 using System.Diagnostics;
 using Web_Scraping___Job_Search;
+using WishList;
 
 namespace ShowInformation
 {
@@ -25,13 +26,9 @@ namespace ShowInformation
             
             foreach (Button button in form.Controls.OfType<Button>())
             {
-                if (button.Text.StartsWith("Next"))
+                if (button.Name.StartsWith("ButtonInteractJob"))
                 {
                     // Do nothing.
-                }
-                else if (button.Text.StartsWith("See"))
-                {
-                    // Do nothing to.
                 }
                 else
                 {
@@ -137,6 +134,8 @@ namespace ShowInformation
 
         public List<Label> ShowMoreInformationJob(JobResultForm form, string index)
         {
+            whistList whishLists = new whistList();
+
             List<Label> labelListJobInformation = new List<Label>();
 
             foreach (Button buttonApply in form.Controls.OfType<Button>())
@@ -145,7 +144,18 @@ namespace ShowInformation
                 {
                     form.Controls.Remove(buttonApply);
                 }
+
+                else if (buttonApply.Name.StartsWith("ButtonWish"))
+                {
+                    form.Controls.Remove(buttonApply);
+                }
             }
+
+            // String for the wishlist.
+
+            string saveTitleLabel = "";
+            string saveSalaryLabel = "";
+            string saveLocationLabel = "";
 
             foreach (Control control in form.Controls)
             {
@@ -166,9 +176,9 @@ namespace ShowInformation
                     form.Controls.Add(descriptionJobLabel);
                     
                 }
-                if (control.Name.Contains("Location" + index))
+                if (control.Name.Contains("Location" + index) && !string.IsNullOrEmpty(control.Text))
                 {
-                    Debug.WriteLine(control.Text);
+                    saveLocationLabel = control.Text;
 
                     Label locationJobLabel = new Label();
                     locationJobLabel.AutoSize = true;
@@ -181,9 +191,9 @@ namespace ShowInformation
                     form.Controls.Add(locationJobLabel);
  
                 }
-                if (control.Name.Contains("Salary" + index))
+                if (control.Name.Contains("Salary" + index) && !string.IsNullOrEmpty(control.Text))
                 {
-                    Debug.WriteLine(control.Text);
+                    saveSalaryLabel = control.Text;
 
                     Label jobSalaryLabel = new Label();
                     jobSalaryLabel.AutoSize = true;
@@ -195,23 +205,29 @@ namespace ShowInformation
 
                     form.Controls.Add(jobSalaryLabel);
                 }
-                if(control.Name.Contains("TitleButton" + index))
-                {
-                    Debug.WriteLine(control.Text);
 
-                    Label titleJobLabel = new Label();
+                Label titleJobLabel = new Label();
+
+                if (control.Name.Contains("TitleButton" + index) && !string.IsNullOrEmpty(control.Text))
+                {
+
+                    saveTitleLabel = control.Text;
+
                     titleJobLabel.AutoSize = true;
                     titleJobLabel.Font = new Font("Arial", 13, FontStyle.Bold);
                     titleJobLabel.Location = new Point(550, 150);
                     titleJobLabel.Name = "TitleInfo";
                     titleJobLabel.Text = control.Text;
 
+
+
                     labelListJobInformation.Add(titleJobLabel);
 
                     form.Controls.Add(titleJobLabel);
                 }
+           
 
-                if(control.Name.Contains("ApplyLink" + index))
+                if (control.Name.Contains("ApplyLink" + index))
                 {
 
                     Button jobApply = new Button();
@@ -223,18 +239,41 @@ namespace ShowInformation
                     jobApply.Text = "Apply Now";
                     jobApply.Name = "ButtonApply";
 
+                    Button jobWish = new Button();
+                    jobWish.AutoSize = true;
+                    jobWish.Font = new Font(jobWish.Font, FontStyle.Bold);
+                    jobWish.Location = new Point(650, 220);
+                    jobWish.BackColor = Color.FromArgb(0x25, 0x57, 0xA7);
+                    jobWish.ForeColor = Color.White;
+                    jobWish.Text = "Wish";
+                    jobWish.Name = "ButtonWish" + index;
 
-                    Debug.WriteLine("Apply link : " + control.Text + "Index : " + index);
+
+                    //Debug.WriteLine("Apply link : " + control.Text + "Index : " + index);
 
                     jobApply.Click += (sender, e) =>
                     {
-                        Debug.WriteLine("Apply link 2 : " + control.Text);
+                        Debug.WriteLine("Apply link 2 : " + saveTitleLabel);
 
                         System.Diagnostics.Process.Start("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", control.Text);
                     };
 
+                    // Button for the wishlist.
+
+                    jobWish.Click += (sender, e) =>
+                    {
+                        Debug.WriteLine("Title : " + saveTitleLabel);
+                        Debug.WriteLine("Title : " + saveSalaryLabel);
+                        Debug.WriteLine("Title : " + saveLocationLabel);
+                        Debug.WriteLine("Apply link : " + control.Text + "Index : " + index);
+
+                        whishLists.PutInformationJobWish(saveTitleLabel, saveLocationLabel, saveSalaryLabel, control.Text);
+                    };
+
+
 
                     form.Controls.Add(jobApply);
+                    form.Controls.Add(jobWish);
                 }
 
             }

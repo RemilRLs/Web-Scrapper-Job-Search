@@ -10,5 +10,8 @@
     <Compile Update="JobResultForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="WishListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -28,6 +28,7 @@ namespace Web_Scraping___Job_Search
 
         private void JobResultForm_Load(object sender, EventArgs e)
         {
+            showJobInfo.offset = 3;
 
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -37,6 +38,12 @@ namespace Web_Scraping___Job_Search
 
             pictureBoxLogo.Image = Image.FromFile("ressources..\\..\\..\\..\\..\\ressources\\logo\\find_job_logo.jpg");
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            ButtonInteractJob2.BackgroundImage = Image.FromFile("ressources..\\..\\..\\..\\..\\ressources\\icons\\right-chevron.png");
+            ButtonInteractJob2.BackgroundImageLayout = ImageLayout.Stretch;
+
+            ButtonInteractJob1.BackgroundImage = Image.FromFile("ressources..\\..\\..\\..\\..\\ressources\\icons\\left-chevron.png");
+            ButtonInteractJob1.BackgroundImageLayout = ImageLayout.Stretch;
 
             this.AutoScroll = true;
 
@@ -59,10 +66,59 @@ namespace Web_Scraping___Job_Search
 
         private void ButtonNextJob_Click_1(object sender, EventArgs e)
         {
-            if(showJobInfo.offset == 0)
+            
+            if(showJobInfo.offset < 0)
             {
-                showJobInfo.offset = 3;
+                showJobInfo.offset = 0;
             }
+            
+
+
+            foreach (Label label in this.Controls.OfType<Label>())
+            {
+                this.Controls.Remove(label);
+            }
+
+            if (labelListInformationJob != null)
+            {
+                foreach (Label label in labelListInformationJob)
+                {
+                    label.Text = "";
+                    this.Controls.Remove(label);
+                }
+            }
+
+            foreach (Button button in this.Controls.OfType<Button>())
+            {
+                
+                if (button.Name.StartsWith("ButtonInteractJob"))
+                {
+                    // Do nothing.
+
+                }
+                else
+                {
+                    this.Controls.Remove(button);
+                }
+            }
+
+            showJobInfo.offset += 3;
+            showJobInfo.ShowJobInformationData(this);
+            
+
+            foreach (Control control in this.Controls)
+            {
+                // Check if the control is a Button
+                if (control is Button && control.Name.StartsWith("TitleButton"))
+                {
+
+                    control.Click += new EventHandler(TitleJobButton_Click);
+                }
+            }
+        }
+
+        private void ButtonPreviousJob_Click(object sender, EventArgs e)
+        {
 
 
 
@@ -82,27 +138,26 @@ namespace Web_Scraping___Job_Search
 
             foreach (Button button in this.Controls.OfType<Button>())
             {
-                if (button.Text.StartsWith("Next"))
+
+                if (button.Name.StartsWith("ButtonInteractJob"))
                 {
                     // Do nothing.
-                    Debug.WriteLine("rEREZ");
 
-                }
-                else if (button.Text.StartsWith("See"))
-                {
-                    Debug.WriteLine("rEREZ");
-                    // Do nothing to.
                 }
                 else
                 {
                     this.Controls.Remove(button);
                 }
             }
-            
 
+            showJobInfo.offset -= 3;
+
+            if (showJobInfo.offset < 0)
+            {
+                showJobInfo.offset = 0;
+            }
             showJobInfo.ShowJobInformationData(this);
-            showJobInfo.offset += 3;
-            
+
 
             foreach (Control control in this.Controls)
             {
@@ -116,9 +171,10 @@ namespace Web_Scraping___Job_Search
         }
 
 
-
         private void TitleJobButton_Click(object sender, EventArgs e)
         {
+
+            // If another button title is click we remove everything.
 
             if(labelListInformationJob != null)
             {
@@ -126,6 +182,19 @@ namespace Web_Scraping___Job_Search
                 {
                     label.Text = "";
                     this.Controls.Remove(label);
+                }
+
+                foreach(Button buttonApply in this.Controls.OfType<Button>())
+                {
+                    if (buttonApply.Name.StartsWith("ButtonApply"))
+                    {
+                        this.Controls.Remove(buttonApply);
+                    }
+
+                    else if (buttonApply.Name.StartsWith("ButtonWish"))
+                    {
+                        this.Controls.Remove(buttonApply);
+                    }
                 }
             }
 
@@ -162,6 +231,14 @@ namespace Web_Scraping___Job_Search
 
             this.Hide();
             jobSearch.Show();
+        }
+
+        private void wishListButton_Click(object sender, EventArgs e)
+        {
+            WishListForm wishList = new WishListForm();
+
+            this.Hide();
+            wishList.Show();
         }
     }
 }
