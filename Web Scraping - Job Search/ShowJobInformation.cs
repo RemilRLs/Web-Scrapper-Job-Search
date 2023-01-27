@@ -79,7 +79,7 @@ namespace ShowInformation
                     Label locationJobLabel = new Label();
 
                     locationJobLabel.AutoSize = true;
-                    locationJobLabel.Location = new Point(29, (locationHeightOffset + 25));  // Adjust this as needed to position the label.
+                    locationJobLabel.Location = new Point(29, (locationHeightOffset + 35));  // Adjust this as needed to position the label.
                     locationJobLabel.ForeColor = Color.Black;
                     locationJobLabel.Font = new Font("Arial", 10);
                     locationJobLabel.Name = "Location" + count.ToString();

@@ -53,6 +53,7 @@
             this.labelAdJob = new System.Windows.Forms.Label();
             this.pictureBoxSearch = new System.Windows.Forms.PictureBox();
             this.pictureBoxLoc = new System.Windows.Forms.PictureBox();
+            this.errorLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -358,12 +359,21 @@
             this.pictureBoxLoc.TabIndex = 12;
             this.pictureBoxLoc.TabStop = false;
             // 
+            // errorLabel
+            // 
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.Location = new System.Drawing.Point(613, 125);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(0, 20);
+            this.errorLabel.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1238, 523);
+            this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.pictureBoxLoc);
             this.Controls.Add(this.pictureBoxSearch);
             this.Controls.Add(this.groupBox1);
@@ -418,5 +428,6 @@
         private PictureBox pictureBoxSearch;
         private PictureBox pictureBoxLoc;
         private Button wishListButton;
+        private Label errorLabel;
     }
 }

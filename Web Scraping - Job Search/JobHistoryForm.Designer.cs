@@ -28,28 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.wishListButton = new System.Windows.Forms.Button();
             this.recentSearch = new System.Windows.Forms.Button();
             this.resultSearch = new System.Windows.Forms.Button();
             this.findJobsButton = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.wishListButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(363, 125);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -64,6 +53,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(921, 70);
             this.panel1.TabIndex = 4;
+            // 
+            // wishListButton
+            // 
+            this.wishListButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.wishListButton.FlatAppearance.BorderSize = 0;
+            this.wishListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wishListButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.wishListButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.wishListButton.Location = new System.Drawing.Point(770, 0);
+            this.wishListButton.Name = "wishListButton";
+            this.wishListButton.Size = new System.Drawing.Size(118, 70);
+            this.wishListButton.TabIndex = 5;
+            this.wishListButton.Text = "Wishlist";
+            this.wishListButton.UseVisualStyleBackColor = true;
+            this.wishListButton.Click += new System.EventHandler(this.wishListButton_Click);
             // 
             // recentSearch
             // 
@@ -128,28 +132,12 @@
             this.pictureBoxLogo.TabStop = false;
             this.pictureBoxLogo.Click += new System.EventHandler(this.pictureBoxLogo_Click);
             // 
-            // wishListButton
-            // 
-            this.wishListButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.wishListButton.FlatAppearance.BorderSize = 0;
-            this.wishListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.wishListButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.wishListButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.wishListButton.Location = new System.Drawing.Point(770, 0);
-            this.wishListButton.Name = "wishListButton";
-            this.wishListButton.Size = new System.Drawing.Size(118, 70);
-            this.wishListButton.TabIndex = 5;
-            this.wishListButton.Text = "Wishlist";
-            this.wishListButton.UseVisualStyleBackColor = true;
-            this.wishListButton.Click += new System.EventHandler(this.wishListButton_Click);
-            // 
             // JobHistoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 450);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
             this.Name = "JobHistoryForm";
             this.Text = "Job History";
             this.Load += new System.EventHandler(this.JobHistoryForm_Load);
@@ -161,8 +149,6 @@
         }
 
         #endregion
-
-        private Button button1;
         private Panel panel1;
         private Button recentSearch;
         private Button resultSearch;

@@ -46,7 +46,7 @@ namespace WebScrapper
             return document;
         }
 
-        public void SearchInformationJob()
+        public bool SearchInformationJob()
         {
             JobSearchInformation jobSearch = new JobSearchInformation();
 
@@ -54,7 +54,16 @@ namespace WebScrapper
 
             HtmlAgilityPack.HtmlDocument document = GetHTMLData();
 
-            jobSearch.GetJobInformation(document);
+            bool nodeBool = jobSearch.GetJobInformation(document);
+
+            if (nodeBool)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
 

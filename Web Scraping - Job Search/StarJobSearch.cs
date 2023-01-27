@@ -14,6 +14,7 @@ using DatabaseMySQL;
 using System.Text.RegularExpressions;
 using System.Data;
 using WebScrapper;
+using Web_Scraping___Job_Search;
 
 namespace JobSearchTool
 {
@@ -24,12 +25,25 @@ namespace JobSearchTool
         public AutoCompleteStringCollection jobTitle = new AutoCompleteStringCollection();
         public AutoCompleteStringCollection jobCity = new AutoCompleteStringCollection();
 
-        public void GetJobInformation(HtmlAgilityPack.HtmlDocument document)
+        public bool GetJobInformation(HtmlAgilityPack.HtmlDocument document)
         {
+            Form1 form = new Form1();
+            JobResultForm jobResultForm = new JobResultForm();
 
             HtmlNode nodeMainDiv = document.DocumentNode.SelectSingleNode("//ol[@id='uxMainContent_uxResultsOL']");
 
-            GetAllInformationJob(nodeMainDiv);
+            if(nodeMainDiv!= null )
+            {
+                GetAllInformationJob(nodeMainDiv);
+
+                return true;
+            }
+            else
+            {
+
+                return false;
+            }
+
 
         }
 

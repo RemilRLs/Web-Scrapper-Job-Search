@@ -11,6 +11,7 @@ using JobHistoryCheck;
 using static System.Windows.Forms.DataFormats;
 using System.Diagnostics;
 using WishList;
+using System.Reflection.Emit;
 
 namespace Web_Scraping___Job_Search
 {
@@ -68,13 +69,10 @@ namespace Web_Scraping___Job_Search
                 textBoxFromSalary.Clear();
             };
 
+
+
             WhatJobTextBox.Click += new EventHandler(WhatJobRichBox_Click);
 
-            ButtonFindJobs.Click += (sender, e) =>
-            {
-                this.Hide();
-                JobResultFormJob.Show();
-            };
 
             AutoCompleteStringCollection customSourceJobTitle = new AutoCompleteStringCollection();
             AutoCompleteStringCollection customSourceJobCity = new AutoCompleteStringCollection();
@@ -137,10 +135,29 @@ namespace Web_Scraping___Job_Search
 
             Debug.WriteLine("The link is : " + advancedLink.ToString());
 
-            newURLDataFinder.SearchInformationJob();
 
-            showJobInfo.ShowJobInformationData(JobResultFormJob);
-            showJobInfo.offset = 0;
+
+            bool nodeBool = newURLDataFinder.SearchInformationJob();
+
+            if(nodeBool)
+            {
+
+                showJobInfo.ShowJobInformationData(JobResultFormJob);
+                showJobInfo.offset = 0;
+
+
+
+                this.Hide();
+                JobResultFormJob.Show();
+             
+            }
+            else
+            {
+                MessageBox.Show("No job offers were found based on your search criteria. Please try adjusting your search parameters and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Debug.WriteLine("NO NODE");
+            }
+
+
 
         }
 
